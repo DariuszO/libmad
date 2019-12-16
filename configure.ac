@@ -104,7 +104,7 @@ do
 	    arch="$arch $1"
 	    shift
 	    ;;
-	-O2)
+	-O3)
 	    optimize="-O"
 	    shift
 	    ;;
@@ -140,7 +140,6 @@ then
     case "$optimize" in
 	-O|"-O "*)
 	    optimize="-O"
-	    optimize="$optimize -fforce-mem"
 	    optimize="$optimize -fforce-addr"
 	    : #x optimize="$optimize -finline-functions"
 	    : #- optimize="$optimize -fstrength-reduce"
